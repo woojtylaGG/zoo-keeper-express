@@ -1,3 +1,5 @@
 ### Pobierz wszystkie zwierzęta
 GET http://localhost:3000/animals
 
+### Pobierz zwierze o ID = 1
+GET http://localhost:3000/animals/1
