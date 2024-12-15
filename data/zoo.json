@@ -9,26 +9,10 @@
   },
   {
     "id": 2,
-    "name": "Nemo",
-    "species": "Clownfish",
+    "name": "Dory",
+    "species": "Fish",
     "age": 2,
-    "isEndangered": true,
+    "isEndangered": false,
     "habitat": "Ocean"
-  },
-  {
-    "id": 3,
-    "name": "Baloo",
-    "species": "Bear",
-    "age": 7,
-    "isEndangered": true,
-    "habitat": "Jungle"
-  },
-  {
-    "id": 4,
-    "name": "Slon",
-    "species": "Elephant",
-    "age": 10,
-    "isEndangered": true,
-    "habitat": "Savanna"
   }
 ]

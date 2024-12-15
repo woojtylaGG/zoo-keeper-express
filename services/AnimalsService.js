@@ -34,6 +34,29 @@ const AnimalsService = {
         animals.push(animal);
         await fsPromises.writeFile(filePath, JSON.stringify(animals, null, 2), "utf-8");
         return animal;
+    },
+
+    async updateAnimal(id, updates) {
+        const animals = await this.getAnimals();
+        const index = animals.findIndex(animal => animal.id === id);
+        if (index === -1) {
+            throw new Error(`Animal with id ${id} not found.`);
+        }
+        const updatedAnimal = { ...animals[index], ...updates };
+        animals[index] = updatedAnimal;
+        await fsPromises.writeFile(filePath, JSON.stringify(animals, null, 2), "utf-8");
+        return updatedAnimal;
+    },
+
+    async deleteAnimal(id) {
+        const animals = await this.getAnimals();
+        const index = animals.findIndex(animal => animal.id === id);
+        if (index === -1) {
+            throw new Error(`Animal with id ${id} not found.`);
+        }
+        animals.splice(index, 1);
+        await fsPromises.writeFile(filePath, JSON.stringify(animals, null, 2), "utf-8");
+        return { message: `Animal with id ${id} deleted.` };
     }
 };
 

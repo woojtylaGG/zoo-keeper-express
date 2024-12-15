@@ -15,6 +15,8 @@ app.get('/animals/habitat/:habitat', AnimalsController.getAnimalsByHabitat);
 app.get('/animals/species', AnimalsController.getAnimalsBySpecies);
 //Dodawanie
 app.post('/animals', AnimalsController.addAnimal);
+app.put('/animals/:id', AnimalsController.updateAnimal);
+app.delete('/animals/:id', AnimalsController.deleteAnimal);
 
 
 

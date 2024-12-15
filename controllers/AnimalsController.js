@@ -60,6 +60,35 @@ const AnimalsController = {
         } catch (error) {
             res.status(500).json({ error: "Failed to add animal." });
         }
+    },
+
+    async updateAnimal(req, res) {
+        const id = parseInt(req.params.id);
+        const updates = req.body;
+        try {
+            const updatedAnimal = await AnimalsService.updateAnimal(id, updates);
+            res.status(200).json(updatedAnimal);
+        } catch (error) {
+            if (error.message.includes('not found')) {
+                res.status(404).json({ error: error.message });
+            } else {
+                res.status(500).json({ error: "Failed to update animal." });
+            }
+        }
+    },
+
+    async deleteAnimal(req, res) {
+        const id = parseInt(req.params.id);
+        try {
+            const result = await AnimalsService.deleteAnimal(id);
+            res.status(200).json(result);
+        } catch (error) {
+            if (error.message.includes('not found')) {
+                res.status(404).json({ error: error.message });
+            } else {
+                res.status(500).json({ error: "Failed to delete animal." });
+            }
+        }
     }
 };
 

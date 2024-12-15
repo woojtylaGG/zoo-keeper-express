@@ -24,3 +24,15 @@ Content-Type: application/json
   "isEndangered": true,
   "habitat": "Savanna"
 }
+
+### Zaktualizuj zwierzę o ID = 1
+PUT http://localhost:3000/animals/1
+Content-Type: application/json
+
+{
+  "age": 6,
+  "habitat": "Jungle"
+}
+
+### Usuń zwierzę o ID = 1
+DELETE http://localhost:3000/animals/1
