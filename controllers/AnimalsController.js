@@ -30,6 +30,26 @@ const AnimalsController = {
         } catch (error) {
             res.status(500).json({ error: "Failed to retrieve endangered animals." });
         }
+    },
+
+    async getAnimalsByHabitat(req, res) {
+        const habitat = req.params.habitat;
+        try {
+            const animals = await AnimalsService.getAnimalsByHabitat(habitat);
+            res.status(200).json(animals);
+        } catch (error) {
+            res.status(500).json({ error: "Failed to retrieve animals by habitat." });
+        }
+    },
+
+    async getAnimalsBySpecies(req, res) {
+        const species = req.query.species;
+        try {
+            const animals = await AnimalsService.getAnimalsBySpecies(species);
+            res.status(200).json(animals);
+        } catch (error) {
+            res.status(500).json({ error: "Failed to retrieve animals by species." });
+        }
     }
 };
 

@@ -5,5 +5,10 @@ GET http://localhost:3000/animals
 GET http://localhost:3000/animals/1
 
 ### Zagrozone zwierzatka
-
 GET http://localhost:3000/animals/endangered
+
+### Pobierz zwierzęta z habitatem "Savanna"
+GET http://localhost:3000/animals/habitat/Savanna
+
+### Pobierz zwierzęta o gatunku "Lion"
+GET http://localhost:3000/animals/species?species=Lion

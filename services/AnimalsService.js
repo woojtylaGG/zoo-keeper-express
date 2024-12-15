@@ -16,6 +16,15 @@ const AnimalsService = {
     async getEndangeredAnimals() {
         const animals = await this.getAnimals();
         return animals.filter(animal => animal.isEndangered);
+    },
+    async getAnimalsByHabitat(habitat) {
+        const animals = await this.getAnimals();
+        return animals.filter(animal => animal.habitat === habitat);
+    },
+
+    async getAnimalsBySpecies(species) {
+        const animals = await this.getAnimals();
+        return animals.filter(animal => animal.species === species);
     }
 };
 

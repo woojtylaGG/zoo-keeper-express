@@ -11,6 +11,9 @@ app.get('/', (req, res) => res.send('Zoo Keeper API is running.'));
 app.get('/animals', AnimalsController.getAllAnimals);
 app.get('/animals/:id', AnimalsController.getAnimalById);
 app.get('/animals/endangered', AnimalsController.getEndangeredAnimals);
+app.get('/animals/habitat/:habitat', AnimalsController.getAnimalsByHabitat);
+app.get('/animals/species', AnimalsController.getAnimalsBySpecies);
+
 
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
