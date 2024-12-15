@@ -12,3 +12,15 @@ GET http://localhost:3000/animals/habitat/Savanna
 
 ### Pobierz zwierzęta o gatunku "Lion"
 GET http://localhost:3000/animals/species?species=Lion
+
+### Dodaj nowe zwierzę
+POST http://localhost:3000/animals
+Content-Type: application/json
+
+{
+  "name": "Slon",
+  "species": "Elephant",
+  "age": 10,
+  "isEndangered": true,
+  "habitat": "Savanna"
+}

@@ -1,5 +1,34 @@
 [
-  { "id": 1, "name": "Simba", "species": "Lion", "age": 5, "isEndangered": true, "habitat": "Savanna" },
-  { "id": 2, "name": "Nemo", "species": "Clownfish", "age": 2, "isEndangered": true, "habitat": "Ocean" },
-  { "id": 3, "name": "Baloo", "species": "Bear", "age": 7, "isEndangered": true, "habitat": "Jungle" }
+  {
+    "id": 1,
+    "name": "Simba",
+    "species": "Lion",
+    "age": 5,
+    "isEndangered": true,
+    "habitat": "Savanna"
+  },
+  {
+    "id": 2,
+    "name": "Nemo",
+    "species": "Clownfish",
+    "age": 2,
+    "isEndangered": true,
+    "habitat": "Ocean"
+  },
+  {
+    "id": 3,
+    "name": "Baloo",
+    "species": "Bear",
+    "age": 7,
+    "isEndangered": true,
+    "habitat": "Jungle"
+  },
+  {
+    "id": 4,
+    "name": "Slon",
+    "species": "Elephant",
+    "age": 10,
+    "isEndangered": true,
+    "habitat": "Savanna"
+  }
 ]

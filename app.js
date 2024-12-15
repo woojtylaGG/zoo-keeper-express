@@ -7,12 +7,14 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => res.send('Zoo Keeper API is running.'));
-
+//Pobieranie
 app.get('/animals', AnimalsController.getAllAnimals);
 app.get('/animals/:id', AnimalsController.getAnimalById);
 app.get('/animals/endangered', AnimalsController.getEndangeredAnimals);
 app.get('/animals/habitat/:habitat', AnimalsController.getAnimalsByHabitat);
 app.get('/animals/species', AnimalsController.getAnimalsBySpecies);
+//Dodawanie
+app.post('/animals', AnimalsController.addAnimal);
 
 
 

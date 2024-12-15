@@ -50,6 +50,16 @@ const AnimalsController = {
         } catch (error) {
             res.status(500).json({ error: "Failed to retrieve animals by species." });
         }
+    },
+
+    async addAnimal(req, res) {
+        const newAnimal = req.body;
+        try {
+            const animal = await AnimalsService.addAnimal(newAnimal);
+            res.status(201).json(animal);
+        } catch (error) {
+            res.status(500).json({ error: "Failed to add animal." });
+        }
     }
 };
 
