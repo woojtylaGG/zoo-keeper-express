@@ -3,3 +3,7 @@ GET http://localhost:3000/animals
 
 ### Pobierz zwierze o ID = 1
 GET http://localhost:3000/animals/1
+
+### Zagrozone zwierzatka
+
+GET http://localhost:3000/animals/endangered

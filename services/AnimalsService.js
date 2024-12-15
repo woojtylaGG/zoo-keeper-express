@@ -11,6 +11,11 @@ const AnimalsService = {
     async getAnimalById(id) {
         const animals = await this.getAnimals();
         return animals.find(animal => animal.id === id);
+    },
+
+    async getEndangeredAnimals() {
+        const animals = await this.getAnimals();
+        return animals.filter(animal => animal.isEndangered);
     }
 };
 
